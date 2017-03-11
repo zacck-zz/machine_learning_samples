@@ -1,5 +1,17 @@
-import sklearn
+from sklearn import treee
 #feature contains the inputs to classifier
-features = [[140, "smooth"], [130 , "smooth"], [150, "bumpy"], [170, "bumpy"]]
+#scikit uses real-valued data
+#1 denotes smooth 2 denotes bumpy
+features = [[140, 1], [130 , 1], [150, 0], [170, 0]]
 #these are the likely outputs we want from the classifier
-labels =["apple", "apple", "orange", "orange"]
+#0 apple 1 orange
+labels =[0, 0, 1, 1]
+
+#train a classifer
+#decision tree
+#create a classifier
+clf = tree.DecisionTreeClassifier()
+#learning alogrithm
+clf = clf.fit(features, labels) # fit fine patterns in data
+
+print clf.predict([[110, 1], [160, 0]])
