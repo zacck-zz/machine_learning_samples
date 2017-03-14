@@ -31,6 +31,7 @@ Ideal Features are. ...
 
 # **Classifiers:**
 These will usually have the same interfaces to interact with e.g
+
 * fit() -- use this to train the classifier
 * predict() -- use to predict on a dataset
 
