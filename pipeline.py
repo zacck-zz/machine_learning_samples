@@ -7,6 +7,8 @@ y = iris.target
 
 #lets parttition the datsets
 from sklearn.cross_validation import train_test_split
+#calculate accuracy
+from sklearn.metrics import accuracy_score
 #partition the data into two sets one for training and one for testing
 #X_train and y_train are the features and labels for training set
 #X_test and y_test are the features and labels for the test set
@@ -21,8 +23,11 @@ my_classifier = tree.DecisionTreeClassifier()
 my_classifier.fit(X_train, y_train)
 #predit on our test cases
 predictions = my_classifier.predict(X_test)
+print str(accuracy_score(y_test, predictions)) + ' decision tree accuracy'
 
-#calculate accuracy
-from sklearn.metrics import accuracy_score
-
-print accuracy_score(y_test, predictions)
+#nearest neighbour classifiers
+from sklearn.neighbors import KNeighborsClassifier
+my_other_classifier = KNeighborsClassifier()
+my_other_classifier.fit(X_train, y_train)
+other_predictions = my_other_classifier.predict(X_test)
+print str(accuracy_score(y_test, other_predictions)) + ' neighbors accuracy'
