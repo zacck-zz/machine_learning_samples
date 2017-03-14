@@ -16,7 +16,7 @@ Classifier - we Train this to identify params for us.
 
 
 
-# **FEATURES**
+# **FEATURES:**
 Classifiers only work as good as the Features you collect:
 
 1. Collect more than one set of features
@@ -29,10 +29,10 @@ Classifiers only work as good as the Features you collect:
 Ideal Features are. ...
 
 
-# **Classifiers**
+# **Classifiers:**
 These will usually have the same interfaces to interact with e.g
-fit
-predict
+* fit() -- use this to train the classifier
+* predict() -- use to predict on a dataset
 
 
 #**Functions**
