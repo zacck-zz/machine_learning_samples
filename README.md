@@ -10,9 +10,9 @@ Classifier - we Train this to identify params for us.
   Support Vector Machine
   Decision Trees
 
-*Features  - usually these are attributes describing an item e.g apple: red, smooth, 110gs
+* Features  - usually these are attributes describing an item e.g apple: red, smooth, 110gs
 
-*Lables - Outputs we want from our classified data
+* Lables - Outputs we want from our classified data
 
 
 
