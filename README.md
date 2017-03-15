@@ -44,3 +44,8 @@ x being features i.e the input and y being the labels i.e outputs
 
 #**Use Supervised Learning**
 we dont want to make the functions for classifying ourselves, much rather have an algorithm learn and train itself using training data.
+
+#**Implementing our Own K Nearest Neighbor**
+Check out the Euclidean distance algorithm.
+*remember to add interface for fit
+*remember to add interface for predict

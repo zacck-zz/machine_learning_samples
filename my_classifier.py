@@ -1,4 +1,8 @@
-import random
+from scipy.spatial import distance
+#use euc algorithm to return distance between objects
+def euc(a,b):
+    return distance.euclidean(a,b)
+
 #lets implement a class for a classifiers
 class BarebonesKNN():
     def fit(self, X_train, y_train):
@@ -8,11 +12,25 @@ class BarebonesKNN():
         pass
     def predict(self, X_test):
         predictions = []
-        #lets randomlly use a row
+        #we iterate through test data
         for row in X_test:
-            label = random.choice(self.y_train)
+            #find the closest element of a row
+            label = self.closest(row)
+            #label  the row
             predictions.append(label)
         return predictions
+    #lets classify the data by getting the closest one
+    def closest(self, row):
+        #find shortest distance between the test data and a train data point
+        best_dist = euc(row, self.X_train[0])
+        best_index = 0
+        #walk through training data look for closer matches to our row
+        for i in range (1, len(self.X_train)):
+            dist = euc(row, self.X_train[i])
+            if dist < best_dist:
+                best_dist = dist
+                best_index = i
+        return self.y_train[best_index]
 
 
 from sklearn import datasets
