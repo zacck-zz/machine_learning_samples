@@ -33,6 +33,7 @@ class BarebonesKNN():
         return self.y_train[best_index]
 
 
+#lets get the data sets
 from sklearn import datasets
 iris = datasets.load_iris()
 
