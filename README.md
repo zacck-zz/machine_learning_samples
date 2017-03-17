@@ -49,4 +49,9 @@ we dont want to make the functions for classifying ourselves, much rather have a
 Check out the Euclidean distance algorithm.
 *remember to add interface for fit
 *remember to add interface for predict
-*predict interface will use whatever function you use to classify 
+*predict interface will use whatever function you use to classify
+
+
+#**Using TensorFlow**
+With tensorflow's neural networ you are relying on some heavier training done by google a few months before.
+We need to install and run tensorflow locally for training.
