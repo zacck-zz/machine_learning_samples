@@ -49,3 +49,4 @@ we dont want to make the functions for classifying ourselves, much rather have a
 Check out the Euclidean distance algorithm.
 *remember to add interface for fit
 *remember to add interface for predict
+*predict interface will use whatever function you use to classify 
